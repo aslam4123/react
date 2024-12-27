@@ -22,7 +22,12 @@ function App() {
           + 
         </button>
         {count}
-        <button onClick={() => setCount((count) => count - 1)}>
+        <button onClick={() => setCount((count) =>{
+          if(count>0){
+            return count - 1
+          }
+          return 0
+        })}>
           - 
         </button>
         <p>
